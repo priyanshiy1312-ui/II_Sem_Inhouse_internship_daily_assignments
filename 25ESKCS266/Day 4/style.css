@@ -1,0 +1,104 @@
+body{
+    margin:0;
+    padding:0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.Admission-card{
+    border: 2px solid black;
+    align-items:center;
+    border-radius:20px;
+     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+     justify-content:center;
+     text-align:center;
+
+     width:400px;
+     background:rgb(106, 98, 245);
+     color:white;
+
+     
+}
+input:not([type="radio"]):not([type="checkbox"]){
+    background-color: antiquewhite;
+     background: linear-gradient(90deg,rgb(194, 192, 243), rgb(235, 218, 221));
+    transition: 0.4s ease;
+    height:30px;
+    width:80%;
+
+    
+}
+input:focus{
+    border:1px solid black;
+}
+
+
+.about{
+    width:80%;
+    height:50px;
+}
+label{
+    
+    display:block;
+    width:45%;
+    
+    font-weight:bold;
+}
+button{
+    background-color: rgb(106, 106, 241);
+    color:white;
+    width:80%;
+}
+button:hover{
+    cursor:pointer;
+}
+.gender input,.skill input:hover{
+    cursor:pointer;
+}
+.gender,.skill{
+    align-items:center;
+}
+.gender,
+.skill{
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+input[type="radio"],
+input[type="checkbox"]{
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+#theme-toggle{
+    
+    top:5px;
+    right:5px;
+    padding:10px 20px;
+    cursor:pointer;
+    border:none;
+    border-radius:1px;
+    font-size:16px;
+}
+
+/* Dark Theme */
+.dark-mode{
+    background-color:#121212;
+    color:white;
+}
+
+.dark-mode button{
+    background-color:white;
+    color:black;
+}
+.error{
+    color:red;
+    font-size:14px;
+    display:block;
+    margin-top:5px;
+}
+
