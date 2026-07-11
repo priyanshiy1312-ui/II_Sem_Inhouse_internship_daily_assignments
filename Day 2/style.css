@@ -1,0 +1,54 @@
+body{
+    
+    
+margin:0;
+padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+
+
+}
+
+button{
+background-color:green;
+color:white;
+}
+button:hover{
+    cursor:pointer;
+}
+.registration-card{
+    background-color:rgb(15, 12, 158);
+    border: 2px solid black;
+    width:400px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+    color:white;
+    border-radius:20px;
+     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+label{
+    display:block;
+    width:45%;
+    text-align:left;
+    font-weight:bold;
+}
+.gender input:hover{
+    cursor:pointer;
+}
+.department input:hover{
+    cursor:pointer;
+}
+input{
+    background-color: antiquewhite;
+     background: linear-gradient(90deg,rgb(194, 192, 243), rgb(235, 218, 221));
+    transition: 0.4s ease;
+}
+.dob{
+    width:30%;
+}
