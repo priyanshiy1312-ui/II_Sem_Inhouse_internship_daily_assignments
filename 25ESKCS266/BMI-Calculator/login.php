@@ -2,7 +2,7 @@
 <?php
 session_start();
 
-include "db.php";
+include "includes/db.php";
 
 $message = "";
 
@@ -22,16 +22,17 @@ if(isset($_POST['login']))
         $user = $result->fetch_assoc();
 
         if(password_verify($password,$user['password']))
-{
-    $_SESSION['user_id'] = $user['id'];
-    $_SESSION['user_name'] = $user['name'];
+        {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_name'] = $user['name'];
 
-    echo "<script>
-    alert('Login Successful!');
-    window.location='dashboard.php';
-    </script>";
-    exit();
-}
+            header("Location: dashboard.php");
+            exit();
+        }
+        else
+        {
+            $message = "Incorrect Password.";
+        }
     }
     else
     {
@@ -155,7 +156,7 @@ Register
 </div>
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

@@ -4,8 +4,9 @@ session_start();
 
 session_destroy();
 
-header("Location:login.php");
-
-exit();
+echo "<script>
+alert('Logged Out Successfully!');
+window.location='login.php';
+</script>";
 
 ?>

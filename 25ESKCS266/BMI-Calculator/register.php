@@ -1,13 +1,5 @@
-
-<?php if($insert->execute())
-{
-    echo "<script>
-    alert('Registration Successful!');
-    window.location='login.php';
-    </script>";
-    exit();
-}?><?php
-include "db.php";
+<?php
+include "includes/db.php";
 
 $message = "";
 
@@ -18,7 +10,7 @@ if(isset($_POST['register']))
     $password = $_POST['password'];
     $confirm = $_POST['confirm'];
 
-    // Check empty fields
+    
     if(empty($name) || empty($email) || empty($password) || empty($confirm))
     {
         $message = "Please fill all fields.";
@@ -48,7 +40,7 @@ if(isset($_POST['register']))
            
             $hashPassword = password_hash($password,PASSWORD_DEFAULT);
 
-            // Insert user
+            
             $insert = $conn->prepare("INSERT INTO users(name,email,password) VALUES(?,?,?)");
             $insert->bind_param("sss",$name,$email,$hashPassword);
 
@@ -220,7 +212,7 @@ Login
 </div>
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
